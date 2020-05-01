@@ -46,8 +46,10 @@ function after_publish() {
 
 //receive a message from MQTT broker
 function mqtt_messsageReceived(topic, message, packet) {
+    
 	var message_str = message.toString(); //convert byte array to string
-	message_str = message_str.replace(/\n$/, ''); //remove new line
+	console.log(message-str);
+    message_str = message_str.replace(/\n$/, ''); //remove new line
 	//payload syntax: clientID,topic,message
 	if (countInstances(message_str) != 1) {
 		console.log("Invalid payload");
