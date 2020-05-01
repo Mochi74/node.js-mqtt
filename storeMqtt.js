@@ -2,7 +2,7 @@
 var mqtt = require('mqtt'); //https://www.npmjs.com/package/mqtt
 var Topic = 'test'; //subscribe to test topic
 var Broker_URL = 'mqtt://localhost';
-var Database_URL = 'mysql://localhost';
+var Database_URL = 'localhost';
 
 var options = {
 	clientId: 'MyMQTT',
