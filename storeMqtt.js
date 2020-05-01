@@ -48,7 +48,7 @@ function after_publish() {
 function mqtt_messsageReceived(topic, message, packet) {
     
 	var message_str = message.toString(); //convert byte array to string
-	console.log(message-str);
+	console.log(message_str);
     message_str = message_str.replace(/\n$/, ''); //remove new line
 	//payload syntax: clientID,topic,message
 	if (countInstances(message_str) != 1) {
