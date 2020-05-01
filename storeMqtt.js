@@ -1,5 +1,5 @@
 // JavaScript Document
-Var mqtt = require('mqtt'); //https://www.npmjs.com/package/mqtt
+var mqtt = require('mqtt'); //https://www.npmjs.com/package/mqtt
 var Topic = 'test'; //subscribe to test topic
 var Broker_URL = 'localhost';
 var Database_URL = 'hocalhost';
@@ -84,7 +84,7 @@ function insert_message(topic, message_str, packet) {
 	var clientID= message_arr[0];
 	var message = message_arr[1];
 	var sql = "INSERT INTO ?? (??,??,??) VALUES (?,?,?)";
-	var params = ['tbl_messages', 'clientID', 'topic', 'message', clientID, topic, message];
+	var params = ['data', 'clientID', 'topic', 'message', clientID, topic, message];
 	sql = mysql.format(sql, params);	
 	
 	connection.query(sql, function (error, results) {
