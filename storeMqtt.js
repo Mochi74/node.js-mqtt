@@ -49,8 +49,8 @@ function mqtt_messsageReceived(topic, message, packet) {
     
 	var message_str = message.toString(); //convert byte array to string
 	console.log(message_str);
-    console.log(topic.tostring());
-    console.log(packet.tostring());
+    console.log(topic.toString());
+    console.log(packet.toString());
     
     message_str = message_str.replace(/\n$/, ''); //remove new line
 	//payload syntax: clientID,topic,message
